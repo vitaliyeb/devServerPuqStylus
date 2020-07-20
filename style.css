@@ -315,7 +315,9 @@ h2{
      width: 100%;
  }
  .advantages{
+     background-clip: content-box;
      padding-bottom: 1px;
+     background-origin: content-box;
      margin-bottom: clamp(30px, 7vw, 60px);
      padding-top: 1px;
      margin-top: clamp(25px, 7vw, 40px);
@@ -366,6 +368,9 @@ h2{
         max-width: 230px;
         margin: 10px auto;
     }
+}
+.advantages_mbsm{
+    margin-bottom: clamp(20px, 6vw, 40px);;
 }
 /*специальные предложения*/
 .spec-off__items{
@@ -756,12 +761,18 @@ footer{
     padding: clamp(20px, 3vw, 30px) clamp(7px, 3vw, 15px);
     margin: 30px auto;
 }
+.note-text_smpad{
+    padding: 20px clamp(7px, 3vw, 15px) 15px;
+}
 .note-text-wrapper{
     display: flex;
     background-color: #3B4360;
 }
 .note-text-wrapper_mf{
     margin-top: -40px;
+}
+.note-text-wrapper_mb{
+    margin-bottom: clamp(25px, 7vw, 60px);
 }
 /* ХОСТИНГ ВКЛЮЧАЕТ */
 .hostOn-wrapper{
@@ -774,6 +785,9 @@ footer{
     background-image: url(./images/hbg.png);
     min-height: 256px;
     font-weight: 500;
+    background-origin: content-box;
+    background-repeat: no-repeat;
+    background-clip: content-box;
     background-color: #3874CE;
     background-size: 100% 100%;
 }
@@ -925,4 +939,141 @@ footer{
 .faq h2{
     margin-top: clamp(20px, 5vw, 40px);
     margin-bottom: clamp(15px, 5vw, 25px);
+}
+/* СЕРАЯ ЛИНИЮ С ТЕКСТОМ     */
+.gray-line{
+    text-align: center;
+    font-weight: 500;
+    font-size: clamp(18px, 3vw, 24px);
+}
+.gray-line > p{
+    background-color: var(--bg-gray);
+    box-sizing: border-box;
+    padding: clamp(10px, 3vw, 18px);
+}
+.gray-line_mintop{
+    margin-top: -15px;
+    margin-bottom: clamp(25px, 4vw, 40px);
+}
+.gray-line_mtbot{
+    margin-bottom: clamp(25px, 5vw ,50px);
+}
+/* ТАРИФЫ ХОСТИНГОВ */
+.tariff-card_host > div{
+    padding-top: 27px;
+    padding-bottom: 28px;
+}
+.tariff-card_host .tariff-card__description{
+    margin-bottom: 15px;
+}
+.tariff-card_host .tariff-card__description span{
+    font-weight: bold;
+}
+.tariff-card__line{
+    width: 100%;
+    background-color: #787F9A;
+    padding: 0 10px;
+    height: 1px;
+    box-sizing: border-box;
+    background-clip: content-box;
+}
+.tariff-card__payment{
+    font-weight: 500;
+    color: #fff;
+}
+.tariff-card__payment > p{
+    margin: 11px 20px;
+}
+.tariff-card__price-note{
+    font-weight: 500;
+    color: #fff;
+}
+.tariff-card__toggle-price{
+    display: flex;
+}
+.tariff-card__toggle-price > p{
+    cursor: pointer;
+    flex-grow: 1;
+    line-height: 35px;
+    text-align: center;
+    background-color: #4A5375;
+}
+.tariff-card__toggle-price > p:nth-child(2){
+    margin: 0 1px;
+}
+.tariff-card__toggle-price > .active{
+    background-color: #6CA8D8;
+}
+.tariff-card .button{
+    margin-top: 20px;
+    margin-bottom: 8px;
+    margin-left: 20px;
+}
+.tariff-cards_cms > div{
+    width: 232px;
+}
+.tariff-card__title{
+    font-family: Bebas Neue;
+}
+/* Тарифы оптимизированы под работу CMS */
+.optimization-cms__items{
+    display: flex;
+    margin-bottom: 10px;
+    justify-content: space-between;
+}
+.optimization-cms__item{
+    max-width: 295px;
+    display: flex;
+    min-height: 125px;
+    width: 100%;
+    margin-left: 2px;
+    margin-right: 2px;
+    align-items: center;
+    margin-bottom: 10px;
+    box-sizing: border-box;
+    font-weight: bold;
+    background-color: var(--bg-gray);
+    padding: 10px 25px;
+}
+.optimization-cms__item > img{
+    margin-right: 20px;
+}
+.optimization-cms > h2{
+    margin-top: clamp( 25px, 4vw, 50px);
+}
+@media(max-width: 920px){
+    .optimization-cms__items{
+        flex-wrap: wrap;
+    }
+    .optimization-cms__item{
+        max-width: 49%;
+        min-height: clamp(85px, 20vw, 125px);
+    }
+}
+@media(max-width: 480px){
+    .optimization-cms__item{
+        max-width: 100%;
+    }
+}
+/* БОЛЬШЕ ВОЗМОЖНОСТЕЙ */
+.more-possibility-wrapper{
+    background-color: #3B4360;
+    width: 100%;
+    display: flex;
+}
+.more-possibility > h2{
+    margin: clamp(20px, 4vw, 40px) 0 clamp(15px, 3vw, 30px);
+    color: #fff;
+}
+.more-possibility__text{
+    background-color: #4D77B6;
+    color: #fff;
+    text-align: center;
+    display: inline-block;
+    width: 100%;
+    font-weight: 500;
+    box-sizing: border-box;
+    padding: clamp(10px, 3vw, 20px) 8px clamp(15px, 4vw, 25px);
+    font-size: clamp(14px, 3vw, 16px);
+    margin-bottom: clamp(20px, 4vw, 35px);
 }
