@@ -1,6 +1,6 @@
 extends ./../layout/main.pug 
 include ./../includes/category-tariff.pug
-
+include ./../includes/testDomain.pug
 
 block variable 
     - var title = 'RuWeb — купить хостинг для сайта | От 50 рублей в месяц'
@@ -10,35 +10,51 @@ block content
     -
         var cards = [
             {
-                imgSrc: "public/images/cardtop.png",
+                imgSrc: "/images/cardtop.png",
                 titlte: "Виртуальный хостинг",
                 price: "от 50 ₽",
                 description: "Попробуйте гибкие тарифы без ограничения трафика"
             },
             {
-                imgSrc: "public/images/cardtop.png",
+                imgSrc: "/images/cardtop.png",
                 titlte: "VDS-серверы",
                 price: "от 169 ₽",
                 description: "Наши VDS — это виртуальный аналог физического сервера под управлением системы виртуализации KVM."
             },
             {
-                imgSrc: "public/images/cardtop.png",
+                imgSrc: "/images/cardtop.png",
                 titlte: "CMS-хостинг",
                 price: "от 115 ₽",
                 description: "Тарифы, подготовленные специально под требования хостинга для CMS."
             },
             {
-                imgSrc: "public/images/cardtop.png",
+                imgSrc: "/images/cardtop.png",
                 titlte: "VIP-хостинг",
                 price: "от 289 ₽",
                 description: "Больше дискового пространства и полностью неограниченный трафик."
             },
             {
-                imgSrc: "public/images/cardtop.png",
+                imgSrc: "/images/cardtop.png",
                 titlte: "Аренда сервера",
                 price: "от 4850 ₽",
                 description: "Персональный сервер — это конфиденциальность и надежная защита информации 24 часа в сутки."
             }
         ]
-      
+     
     +categoryIndex(cards)
+
+    -
+        var domains = [
+            { title: '.ru', isActive: false},
+            { title: '.com', isActive: false},
+            { title: '.рф', isActive: false},
+            { title: '.net', isActive: true},
+            { title: '.su', isActive: false},
+            { title: '.org', isActive: false},
+            { title: '.ru', isActive: false},
+            { title: '.tv', isActive: false},
+            { title: '.pro', isActive: false},
+            { title: '.info', isActive: false},
+            { title: '.mobi', isActive: false},
+            { title: '.name', isActive: false}
+        ]

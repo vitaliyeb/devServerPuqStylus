@@ -54,6 +54,18 @@ async function returnProgectConfig (){
                     },
                   ],
                 },
+                {
+                  test: /\.(woff(2)?|ttf|otf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+                  use: [
+                    {
+                      loader: 'file-loader',
+                      options: {
+                        name: '[name].[ext]',
+                        outputPath: 'fonts/'
+                      }
+                    }
+                  ]
+                }
           ]
       },
       plugins: [
@@ -65,7 +77,10 @@ async function returnProgectConfig (){
               template: `${PAGES_DIR}/${page}`,
               filename: `./${page.replace(/\.pug/,'.html')}`
             }))
-      ]
+      ],
+      devServer: {
+        contentBase: path.join(__dirname, 'build'),
+      }
   }
 }
 
