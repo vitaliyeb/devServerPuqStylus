@@ -1022,6 +1022,12 @@ footer{
 .tariff-cards_vip  .tariff-card__line{
     margin-top: 40px;
 }
+.tariff-cards_res > div{
+    width: 295px;
+}
+.tariff-cards_res .button{
+    margin-top: 15px;
+}
 
 /* Тарифы оптимизированы под работу CMS */
 .optimization-cms__items{
@@ -1085,6 +1091,16 @@ footer{
     font-size: clamp(14px, 3vw, 16px);
     margin-bottom: clamp(20px, 4vw, 35px);
 }
+.more-possibility .button{
+    display: table;
+    padding: 7px 20px;
+    margin: -5px auto 15px;
+    font-size: clamp(16px, 2vw, 20px);
+}
+.more-possibility .server-info__demo{
+    margin-bottom: 30px;
+}
+
 /* СУИТ */
 .suit__items{
     display: flex;

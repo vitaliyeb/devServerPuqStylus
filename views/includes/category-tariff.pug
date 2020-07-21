@@ -1,0 +1,15 @@
+
+
+mixin categoryIndex(cards)
+    div.tariffs.container
+        h1.heading_h1 RuWeb – хостинг сайтов и регистрация доменов
+        div.tariffs__card-wrapper
+            div.tariffs__cards.tariffs__cards_category
+                each card in cards 
+                    div.tariff-card
+                        img(class="tariff-card__image" src=card.imgSrc alt="card logo")
+                        div.tariff-card__info
+                            p.tariff-card__title Виртуальный хостинг
+                            p.tariff-card__price от 50 ₽
+                            p.tariff-card__description Попробуйте гибкие тарифы без ограничения трафика
+                        p.button.button_medium Подробнее
