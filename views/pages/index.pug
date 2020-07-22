@@ -1,6 +1,10 @@
 extends ./../layout/main.pug 
 include ./../includes/category-tariff.pug
 include ./../includes/testDomain.pug
+include ./../includes/advantages.pug
+include ./../includes/specOff.pug
+include ./../includes/pageText.pug
+
 
 block variable 
     - var title = 'RuWeb — купить хостинг для сайта | От 50 рублей в месяц'
@@ -40,7 +44,6 @@ block content
                 description: "Персональный сервер — это конфиденциальность и надежная защита информации 24 часа в сутки."
             }
         ]
-     
     +categoryIndex(cards)
 
     -
@@ -52,9 +55,34 @@ block content
             { title: '.su', isActive: false},
             { title: '.org', isActive: false},
             { title: '.ru', isActive: false},
-            { title: '.tv', isActive: false},
+            { title: '.tv', isActive: true},
             { title: '.pro', isActive: false},
             { title: '.info', isActive: false},
             { title: '.mobi', isActive: false},
             { title: '.name', isActive: false}
         ]
+    +testDonain(domains)    
+
+    -
+        var advant = {
+            title: 'Преимущества RuWeb',
+            items: [
+                {img: '/images/ad1.png', description: 'Техническая поддержка работает онлайн 24/7.'},
+                {img: '/images/ad2.png', description: 'Дата-центр в России.'},
+                {img: '/images/ad3.png', description: 'Защита веб-сайтов от DDOS-атак.'},
+                {img: '/images/ad4.png', description: 'SSL-сертификаты (Let`s Encrypt, Comodo, Comodo, GeoTrust).'},
+                {img: '/images/ad5.png', description: 'Лицензии на панели управления.'}
+            ]
+        }
+    +advantages(advant)    
+
+    -
+        var sp = [
+            {title: '1500 руб.', description: 'Бонус при продлении услуги хостинга на сумму более 1500 ₽'},
+            {title: '6 месяцев', description: 'При продлении на срок от 6 месяцев — дополнительные скидки.'},
+            {title: '30 дней', description: 'Манибэк — 30 дней. <br><br> В течение первого месяца вы можете отказаться от наших услуг и вернуть всю сумму, внесенную за оплату хостинга (без учета комиссии за перевод).'},
+            {title: '1 месяц', description: 'Вы можете заказать тестовый месяц хостинга бесплатно и без предоплаты, если у вас есть собственное доменное имя или персональный аттестат WebMoney.'}
+        ]
+    +specOff(sp)
+
+    +pageText()
