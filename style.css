@@ -332,8 +332,8 @@ h2{
  }
  .advantages__items{
     display: flex;
-     justify-content: space-around;
-     margin-bottom: 40px;
+    justify-content: space-around;
+    margin-bottom: 40px;
  }
  .advantages__item{
      color: #fff;
@@ -353,7 +353,6 @@ h2{
     }
     .advantages__items{
         flex-wrap: wrap;
-
         justify-content: space-between;
     }
     .advantages__item:last-child {
@@ -522,7 +521,6 @@ footer{
 .footer__nummber-tel > span{
     display: inline-block;
     width: 145px;
-     ;
     font-weight: 400;
     font-size: 14px;
 }
