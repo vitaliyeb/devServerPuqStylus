@@ -13,3 +13,4 @@ import './hostOn.styl';
 import './serverInfo.styl';
 import './faq.styl';
 import './noteGray.styl';
+import  './tariff-card.styl';
